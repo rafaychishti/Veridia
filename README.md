@@ -1,4 +1,4 @@
-# loam
+# neo-veridia
 
 A tiny, deterministic world that grows itself.
 
