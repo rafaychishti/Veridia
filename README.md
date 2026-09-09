@@ -2,7 +2,7 @@
 
 A tiny, deterministic world that grows itself.
 
-![loam](docs/screenshot.png)
+![neo-veridia](docs/screenshot.png)
 
 ## What this is
 
