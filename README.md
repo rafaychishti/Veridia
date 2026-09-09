@@ -6,7 +6,7 @@ A tiny, deterministic world that grows itself.
 
 ## What this is
 
-`loam` generates a patch of terrain from a seed, drops a couple dozen cars
+`neo-veridia` generates a patch of terrain from a seed, drops a couple dozen cars
 and pedestrians onto it, and lets them wander while a day/night cycle turns
 overhead. There's no goal, no score, no backend. It's the first entry in a
 small set of hobby simulations I'm building for the sake of building them —
