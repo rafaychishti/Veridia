@@ -52,7 +52,7 @@ export function generateTerrain(seed: number, options: Partial<TerrainOptions> =
   const heightNoise = createNoise2D(() => rng.next());
   const moistureNoise = createNoise2D(() => rng.next());
 
-  const tiles: Tile[] = new Array(opts.width * opts.height);
+  const tiles: Tile[] = Array.from({ length: opts.width * opts.height });
   const settlementRng = rng.fork();
   const treeRng = rng.fork();
 
