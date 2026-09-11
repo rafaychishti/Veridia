@@ -68,6 +68,15 @@ grass / forest / mountain / snow. Two independent RNG forks handle tree and
 settlement placement so that turning up the population doesn't perturb the
 terrain, and vice versa.
 
+## Current direction
+
+The project is intentionally small. Right now the focus is on a clean terrain
+layer, a deterministic simulation loop, and a renderer that reads the world
+instead of owning it.
+
+The idea is to keep the code approachable and let the world feel calm rather
+than busy.
+
 ## Running it
 
 ```

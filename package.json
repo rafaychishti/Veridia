@@ -1,8 +1,22 @@
 {
-  "name": "world-simulator",
+  "name": "veridia",
+  "description": "A small deterministic world simulation about terrain, wandering agents, and a quiet procedural landscape.",
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rafaychishti/Veridia.git"
+  },
+  "keywords": [
+    "simulation",
+    "procedural",
+    "terrain",
+    "world",
+    "pixi",
+    "vite"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
