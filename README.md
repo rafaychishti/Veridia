@@ -1,6 +1,9 @@
 # Veridia
 
-A tiny, deterministic world that grows itself.
+A small deterministic world that grows itself.
+
+This project started as a quiet little sandbox for terrain, wandering agents,
+and the shape of an open world that feels alive without being a game.
 
 ![Veridia](docs/screenshot.png)
 
@@ -8,10 +11,10 @@ A tiny, deterministic world that grows itself.
 
 `Veridia` generates a patch of terrain from a seed, drops a couple dozen cars
 and pedestrians onto it, and lets them wander while a day/night cycle turns
-overhead. There's no goal, no score, no backend. It's the first entry in a
-small set of hobby simulations I'm building for the sake of building them —
-this one is about world generation and a from-scratch entity system, not
-about being a game.
+overhead. There's no goal, no score, no backend. It is a small simulation
+project built around the idea of keeping the world rules separate from the
+renderer. The whole thing is meant to feel like a quiet environment that can
+keep evolving without becoming too complicated.
 
 The interesting part isn't really the visuals. It's the rule the whole thing
 is built around: **the simulation has no idea PixiJS exists.** Everything
@@ -53,11 +56,11 @@ src/
     GenerationPanel.tsx  sea level / mountain level sliders
 ```
 
-There's no inheritance tree of entity subclasses. An entity is just an
-integer id; whatever components are attached to that id *are* the entity.
-`World.query(["position", "velocity", "agent"])` returns every id that has
-all three, and a system runs over exactly that set. Adding a new kind of
-thing to the world means adding a component and a system, not a class.
+The simulation is intentionally simple. An entity is just an integer id;
+whatever components are attached to that id are the entity. A `World.query`
+call returns every id that matches the requested components, and a system runs
+over exactly that set. That keeps the world model clean and leaves room for
+new things without building a class tree.
 
 Terrain generation stacks a few octaves of simplex noise for height and a
 separate stream for moisture, then buckets the result into ocean / sand /
